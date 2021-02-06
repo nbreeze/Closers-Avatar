@@ -1,0 +1,35 @@
+@import "../../styles/Constants.module.scss";
+
+.characterPanelContainer {
+	overflow: hidden;
+	bottom: 0%;
+	left: 0;
+
+	// padding-top: 2px;
+	// background-image: linear-gradient(90deg, $gradient-secondary-color 0%, $gradient-primary-color 50%, $gradient-secondary-color 100%);
+
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.characterIcons {
+	// background-image: linear-gradient(0deg, rgba(0, 20, 36, 1) 0%, rgba(0, 14, 36, 1) 39%, rgba(0, 48, 92, 1) 96%, rgba(13, 59, 103, 1) 100%);
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+.characterIconContainer {
+	background-color: gray;
+	margin: 0 5px 0 5px;
+}
+
+.characterIcon {
+	width: 128px;
+	height: 128px;
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	cursor: pointer;
+}

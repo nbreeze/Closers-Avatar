@@ -1,0 +1,45 @@
+@import "../styles/Constants.module.scss";
+
+.backdrop {
+	backdrop-filter: blur(6px);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.panelSection {
+	width: 100%;
+	height: 45%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.panelItem {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.panelItemCenter {
+	@extend .panelItem;
+	justify-content: center;
+	margin: 0 15px 0 15px;
+}
+
+.panelItemFirst {
+	@extend .panelItem;
+	justify-content: flex-end;
+	align-items: flex-start;
+	width: 25%;
+}
+
+.panelItemLast {
+	@extend .panelItem;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 25%;
+}

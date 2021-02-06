@@ -1,0 +1,95 @@
+@import "../../styles/Constants.module.scss";
+
+$team-button-clip: polygon(25% 10%, 75% 10%, 100% 50%, 75% 90%, 25% 90%, 0% 50%);
+
+@keyframes teamButtonBorder {
+	0% {
+		background-position-y: 0%;
+	}
+
+	100% {
+		background-position-y: 200%;
+	}
+}
+
+.teamSelectContainer {
+	position: relative;
+	height: 256px;
+}
+
+.teamButtonContainer {
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+
+	// The border color.
+	background-image: linear-gradient(0deg, $gradient-primary-color 0%, rgb(26, 109, 105) 50%, $gradient-primary-color 100%);
+	background-repeat: repeat-y;
+
+	background-position-y: 0;
+	background-size: 100% 200%;
+
+	animation: teamButtonBorder 1.5s linear infinite;
+
+	transition: width 0.2s, height 0.2s, top 0.2s, left 0.2s;
+
+	position: relative;
+
+	clip-path: $team-button-clip;
+}
+
+.teamButton {
+	width: 98%;
+	height: 98%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	position: absolute;
+	top: 1%;
+	left: 1%;
+
+	cursor: pointer;
+
+	background: linear-gradient(0deg, $gradient-primary-color 0%, rgb(17, 34, 84) 50%, $gradient-secondary-color 100%);
+
+	clip-path: $team-button-clip;
+}
+
+.teamButtonSelected {
+}
+
+.teamButtonSelected .overlay {
+	background-color: transparent;
+}
+
+.teamButtonImage {
+	width: 100%;
+	height: 100%;
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.teamButtonOverlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: background-color 0.2s;
+}
+
+.teamButton:hover .teamButtonOverlay {
+	background-color: transparent;
+}
+
+.teamButtonOverlaySelected {
+	background-color: transparent;
+}
+
+.teamButton:focus {
+	outline: none;
+}
